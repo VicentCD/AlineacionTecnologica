@@ -1,0 +1,42 @@
+.header-container {
+    background-color: lightgreen;
+}
+
+.header-text {
+    font-size: 100px;
+    color: green;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: text-animation-color 6s infinite linear;
+    -moz-animation:text-animation-color 5s infinite; /* Firefox */
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+@-webkit-keyframes text-animation-color {
+    /*desde el color base hasta todos*/
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+@-moz-keyframes text-animation-color /* Firefox */
+{
+    0%   {color:red;}
+    50%  {color:yellow;}
+    100%   {color:red;}
+}
+
+.body-selector {
+    background-color: red;
+    height: 1000px;
+}
+
+.body-stadium {
+    background-color: blue;
+    height: 1000px;
+}
