@@ -423,21 +423,50 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'LetraHeader';
+  /*a name to be used later*/
+  src: url("../font/fonts/PIJAMAS_.ttf");
+  /*URL to font*/ }
+
+@font-face {
+  font-family: 'LetraHeader2';
+  /*a name to be used later*/
+  src: url("../font/fonts/GREENPIL.ttf");
+  /*URL to font*/ }
+
+@font-face {
+  font-family: 'LetraHeader3';
+  /*a name to be used later*/
+  src: url("../font/fonts/DK.ttf");
+  /*URL to font*/ }
+
 .header-container {
-  background-color: lightgreen; }
+  background-color: lightgreen;
+  border: 10px dashed green;
+  /*animation: 5s animacionBorder infinite;*/ }
 
 .header-text {
+  font-family: 'LetraHeader3';
   font-size: 100px;
   color: green;
-  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: text-animation-color 6s infinite linear;
-  -moz-animation: text-animation-color 5s infinite;
-  /* Firefox */
   margin: 0px;
-  padding: 10px 0px; }
+  padding: 10px 0px;
+  -webkit-background-clip: text;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: text-animation-color 8s infinite;
+  -moz-animation: text-animation-color 8s infinite;
+  /* Firefox */ }
 
+/*@keyframes animacionBorder {
+    from {
+        border-color: black;
+    }
+    to {
+        border-color:green;
+    }
+}*/
 @-webkit-keyframes text-animation-color {
   /*desde el color base hasta todos*/
   from {
@@ -453,10 +482,23 @@ template {
   100% {
     color: red; } }
 
-.body-selector {
-  background-color: red;
-  height: 1000px; }
+.selector {
+  background-color: lightgreen;
+  border-right: 10px dashed green; }
 
-.body-stadium {
-  background-color: blue;
-  height: 1000px; }
+.selector-col-1 {
+  /*    height: 100px;
+        background-color: yellow;*/ }
+
+.selector-col-2 {
+  /*    height: 100px;
+        background-color: black;*/ }
+
+/*.stadium {
+    position: fixed;
+    width:  100%;
+    top: 0;
+}*/
+/*.campo {
+    position: fixed;
+}*/
