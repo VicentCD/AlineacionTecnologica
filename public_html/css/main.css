@@ -484,21 +484,25 @@ template {
 
 .selector {
   background-color: lightgreen;
-  border-right: 10px dashed green; }
+  border-right: 10px dashed green;
+  height: 100%;
+  width: 100%; }
 
 .selector-col-1 {
-  /*    height: 100px;
-        background-color: yellow;*/ }
+  padding-top: 15px; }
 
 .selector-col-2 {
-  /*    height: 100px;
-        background-color: black;*/ }
+  padding-top: 15px; }
 
-/*.stadium {
-    position: fixed;
-    width:  100%;
-    top: 0;
-}*/
-/*.campo {
+.item-selector {
+  margin-bottom: 15px; }
+
+.stadium {
+  position: fixed;
+  width: 100%;
+  top: 0; }
+
+/*
+.campo {
     position: fixed;
 }*/
