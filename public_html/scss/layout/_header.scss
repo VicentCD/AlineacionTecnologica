@@ -1,12 +1,11 @@
 .header-container {
     background-color: lightgreen;
-
     border: 10px dashed green;
     /*animation: 5s animacionBorder infinite;*/
 }
 
 .header-text {
-    font-family: 'LetraHeader3';
+    font-family: 'LetraStandard';
     font-size: 100px;
     color: green;
 
@@ -45,35 +44,4 @@
     0%   {color:red;}
     50%  {color:yellow;}
     100%   {color:red;}
-}
-
-#posicion1 {
-    height: 150px;
-    width: 150px;
-    border: 1px black solid;
-    position: absolute;
-    top: 64%;
-    left: 43%;
-}
-
-#colocacionItem1 {
-    height: 100px;
-    width: 100px;
-    border: 1px black solid;
-}
-
-#colocacionItem1:hover {
-    /*-webkit-animation: colocacion-item-transition 2s infinite;*/
-    /*animation: colocacion-item-transition 2s ease;*/
-}
-
-
-
-.texto-pie-item {
-    color: black;
-    font-weight: bold;
-}
-
-@keyframes colocacion-item-transition {
-    border: yellow 2px solid;
 }

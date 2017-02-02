@@ -3,3 +3,73 @@
     width:  100%;
     top: 0;
 }
+
+
+/*Posiciones en el campo*/
+#posicion1 {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 64%;
+    left: 43%;
+}
+
+#posicion2 {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 45%;
+    left: 25%;
+}
+
+#posicion3 {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 45%;
+    left: 60%;
+}
+
+#posicion4 {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 35%;
+    left: 43%;
+}
+
+#posicion5 {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 20%;
+    left: 55%;
+}
+
+#posicion6 {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+.dropItem {
+    height: 105px;
+    width: 105px;
+    border: 2px white solid;
+    border-radius: 15px;
+}
+
+.dropItem:hover {
+    border-color: red;
+}
+
+.texto-pie-item {
+    background-color: white;
+    border: 2px solid;
+    border-radius: 40px;
+    color: red;
+    font-size: 30px;
+    font-family: LetraStandard;
+}

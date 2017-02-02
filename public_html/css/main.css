@@ -425,21 +425,15 @@ template {
 
 @font-face {
   font-family: 'LetraHeader';
-  /*a name to be used later*/
-  src: url("../font/fonts/PIJAMAS_.ttf");
-  /*URL to font*/ }
+  src: url("../font/fonts/PIJAMAS_.ttf"); }
 
 @font-face {
   font-family: 'LetraHeader2';
-  /*a name to be used later*/
-  src: url("../font/fonts/GREENPIL.ttf");
-  /*URL to font*/ }
+  src: url("../font/fonts/GREENPIL.ttf"); }
 
 @font-face {
-  font-family: 'LetraHeader3';
-  /*a name to be used later*/
-  src: url("../font/fonts/DK.ttf");
-  /*URL to font*/ }
+  font-family: 'LetraStandard';
+  src: url("../font/fonts/DK.ttf"); }
 
 .item-selector {
   margin-bottom: 15px; }
@@ -511,7 +505,7 @@ template {
   /*animation: 5s animacionBorder infinite;*/ }
 
 .header-text {
-  font-family: 'LetraHeader3';
+  font-family: 'LetraStandard';
   font-size: 100px;
   color: green;
   margin: 0px;
@@ -546,34 +540,10 @@ template {
   100% {
     color: red; } }
 
-#posicion1 {
-  height: 150px;
-  width: 150px;
-  border: 1px black solid;
-  position: absolute;
-  top: 64%;
-  left: 43%; }
-
-#colocacionItem1 {
-  height: 100px;
-  width: 100px;
-  border: 1px black solid; }
-
-#colocacionItem1:hover {
-  /*-webkit-animation: colocacion-item-transition 2s infinite;*/
-  /*animation: colocacion-item-transition 2s ease;*/ }
-
-.texto-pie-item {
-  color: black;
-  font-weight: bold; }
-
-@keyframes colocacion-item-transition {
-  border: yellow 2px solid; }
-
 .selector {
   background-color: lightgreen;
   border-right: 10px dashed green;
-  height: 100%;
+  /*height: 100%;*/
   width: 100%; }
 
 .selector-col-1 {
@@ -586,3 +556,63 @@ template {
   position: absolute;
   width: 100%;
   top: 0; }
+
+/*Posiciones en el campo*/
+#posicion1 {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 64%;
+  left: 43%; }
+
+#posicion2 {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 45%;
+  left: 25%; }
+
+#posicion3 {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 45%;
+  left: 60%; }
+
+#posicion4 {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 35%;
+  left: 43%; }
+
+#posicion5 {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 20%;
+  left: 55%; }
+
+#posicion6 {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 20%;
+  left: 30%; }
+
+.dropItem {
+  height: 105px;
+  width: 105px;
+  border: 2px white solid;
+  border-radius: 15px; }
+
+.dropItem:hover {
+  border-color: red; }
+
+.texto-pie-item {
+  background-color: white;
+  border: 2px solid;
+  border-radius: 40px;
+  color: red;
+  font-size: 30px;
+  font-family: LetraStandard; }

@@ -11,16 +11,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-        
+
         <!--CSS-->
         <link rel="stylesheet" href="css/main.css" type="text/css" media="all" />
         <link rel="stylesheet" href="font/css/font-awesome.min.css" media="all" />
         <link href="boostrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/animate.css" rel="stylesheet" type="text/css"/>
-        
+
         <!--SCRIPTS-->
         <script src="js/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
-        
+        <script src="js/draganddrop.js" type="text/javascript"></script>
+
     </head>
 
     <body>
@@ -31,36 +32,66 @@
             <div class="selector col-lg-4">
                 <div class="row">
                     <div class="selector-col-1 col-lg-6">
-                        <img src="img/java-logo.png" alt="Java" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/apache-logo.png" alt="Apache Server" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/glassfish-logo.png" alt="GlassFish Server" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/mysql-logo.png" alt="MySQL" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/javascript-logo.png" alt="JavaScript" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/jquery-logo.gif" alt="Jquery" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/mongodb-logo.png" alt="MongoDB" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/react-logo.png" alt="React" height="100" width="100" class="item-selector center-block"/>
+                        <img id="item-1" src="img/java-logo.png" alt="Java" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-2" src="img/apache-logo.png" alt="Apache Server" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-3" src="img/glassfish-logo.png" alt="GlassFish Server" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-4" src="img/mysql-logo.png" alt="MySQL" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-5" src="img/javascript-logo.png" alt="JavaScript" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-6" src="img/jquery-logo.gif" alt="Jquery" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-7" src="img/mongodb-logo.png" alt="MongoDB" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-8" src="img/react-logo.png" alt="React" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
 
                     </div>
                     <div class="selector-col-2 col-lg-6">
-                        <img src="img/angular-logo.png" alt="Angular" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/ant-logo.png" alt="Ant" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/gradle-logo.png" alt="Gradle" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/maven-logo.png" alt="Maven" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/nodejs-logo.png" alt="NodeJS" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/php-logo.png" alt="PHP" height="100" width="100" class="item-selector center-block"/>
-                        <img src="img/python-logo.png" alt="Python" height="100" width="100" class="item-selector center-block"/>
+                        <img id="item-9" src="img/angular-logo.png" alt="Angular" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-10" src="img/ant-logo.png" alt="Ant" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-11" src="img/gradle-logo.png" alt="Gradle" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-12" src="img/maven-logo.png" alt="Maven" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-13" src="img/nodejs-logo.png" alt="NodeJS" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-14" src="img/php-logo.png" alt="PHP" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                        <img id="item-15" src="img/python-logo.png" alt="Python" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
                     </div>
                 </div>
             </div>
             <div class="stadium col-lg-8">
                 <img class="center-block" src="img/campo-futbol.jpg" alt="Campo Futbol" height="800" width="800"/>
                 <div id="posicion1">
-                    <div id="colocacionItem1" class="center-block">
-                        
+                    <div id="dropItem1" class="dropItem center-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    </div>
+                    <h4 class="texto-pie-item text-center animated bounceInDown">Servidor HTTP</h4>
+                </div>
+                <div id="posicion2">
+                    <div id="dropItem2" class="dropItem center-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    </div>
+                    <h4 class="texto-pie-item text-center animated bounceInDown">Compilador Web</h4>
+                </div>
+                <div id="posicion3">
+                    <div id="dropItem3" class="dropItem center-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    </div>
+                    <h4 class="texto-pie-item text-center animated bounceInDown">Base de Datos</h4>
+                </div>
+                <div id="posicion4">
+                    <div id="dropItem4" class="dropItem center-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+
                     </div>
                     <h4 class="texto-pie-item text-center animated bounceInDown">Servidor</h4>
                 </div>
-            </div>    
+                <div id="posicion5">
+                    <div id="dropItem5" class="dropItem center-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    </div>
+                    <h4 class="texto-pie-item text-center animated bounceInDown">Cliente</h4>
+                </div>
+                <div id="posicion6">
+                    <div id="dropItem6" class="dropItem center-block" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                    </div>
+                    <h4 class="texto-pie-item text-center animated bounceInDown">Framework</h4>
+                </div>
+            </div> 
         </div>
     </body>
 </html>
