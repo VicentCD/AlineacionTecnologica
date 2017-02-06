@@ -21,6 +21,8 @@
         <!--SCRIPTS-->
         <script src="vendor/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
         <script src="js/stadium.js" type="text/javascript"></script>
+        <script src="js/selector.js" type="text/javascript"></script>
+        <script src="index.js" type="text/javascript"></script>
 
     </head>
 
@@ -33,64 +35,91 @@
                 <div class="selector col-lg-4">
                     <div class="row">
                         <div class="selector-col-1 col-lg-6">
-                            <div id="caja-1" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
+                            <div id="Selector-1" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
                                 <img id="item-1" src="img/java-logo.png" alt="Java" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
                             </div>
-                            <img id="item-2" src="img/apache-logo.png" alt="Apache Server" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-3" src="img/glassfish-logo.png" alt="GlassFish Server" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-4" src="img/mysql-logo.png" alt="MySQL" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-5" src="img/javascript-logo.png" alt="JavaScript" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-6" src="img/jquery-logo.gif" alt="Jquery" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-7" src="img/mongodb-logo.png" alt="MongoDB" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-8" src="img/react-logo.png" alt="React" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-
+                            <div id="Selector-2" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-2" src="img/apache-logo.png" alt="Apache Server" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-3" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-3" src="img/glassfish-logo.png" alt="GlassFish Server" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-4" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-4" src="img/mysql-logo.png" alt="MySQL" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-5" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-5" src="img/javascript-logo.png" alt="JavaScript" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-6" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-6" src="img/jquery-logo.gif" alt="Jquery" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-7" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-7" src="img/mongodb-logo.png" alt="MongoDB" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-8" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-8" src="img/react-logo.png" alt="React" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
                         </div>
                         <div class="selector-col-2 col-lg-6">
-                            <img id="item-9" src="img/angular-logo.png" alt="Angular" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-10" src="img/ant-logo.png" alt="Ant" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-11" src="img/gradle-logo.png" alt="Gradle" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-12" src="img/maven-logo.png" alt="Maven" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-13" src="img/nodejs-logo.png" alt="NodeJS" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-14" src="img/php-logo.png" alt="PHP" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
-                            <img id="item-15" src="img/python-logo.png" alt="Python" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            <div id="Selector-9" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-9" src="img/angular-logo.png" alt="Angular" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-10" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-10" src="img/ant-logo.png" alt="Ant" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-11" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-11" src="img/gradle-logo.png" alt="Gradle" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-12" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-12" src="img/maven-logo.png" alt="Maven" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-13" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-13" src="img/nodejs-logo.png" alt="NodeJS" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-14" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-14" src="img/php-logo.png" alt="PHP" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
+                            <div id="Selector-15" ondrop="dropSelector(event)" ondragover="allowDrop(event)">
+                                <img id="item-15" src="img/python-logo.png" alt="Python" height="100" width="100" class="item-selector center-block" draggable="true" ondragstart="drag(event)"/>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="stadium col-lg-8">
                     <img class="center-block" src="img/campo-futbol.jpg" alt="Campo Futbol" height="800" width="800"/>
                     <div id="posicion1">
-                        <div id="dropItem1" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
-                            <img id="prueba-1" src="http://www.chiletransparente.cl/wp-content/uploads/2015/10/caja_transparente.png" alt="prueba" height="100" width="100" draggable="false" ondragstart="drag(event)"/>
+                        <div id="dropItemCase-1" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
+                            <img id="dropItem-1" src="img/caja_transparente.png" alt="prueba" height="100" width="100" draggable="false" ondragstart="drag(event)"/>
                         </div>
                         <h4 class="texto-pie-item text-center animated bounceInDown">Servidor HTTP</h4>
                     </div>
                     <div id="posicion2">
-                        <div id="dropItem2" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
-
+                        <div id="dropItemCase-2" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
+                            <img id="dropItem-2" src="img/caja_transparente.png" alt="prueba" height="100" width="100" draggable="false" ondragstart="drag(event)"/>
                         </div>
                         <h4 class="texto-pie-item text-center animated bounceInDown">Compilador Web</h4>
                     </div>
                     <div id="posicion3">
-                        <div id="dropItem3" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
-
+                        <div id="dropItemCase-3" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
+                            <img id="dropItem-3" src="img/caja_transparente.png" alt="prueba" height="100" width="100" draggable="false" ondragstart="drag(event)"/>
                         </div>
                         <h4 class="texto-pie-item text-center animated bounceInDown">Base de Datos</h4>
                     </div>
                     <div id="posicion4">
-                        <div id="dropItem4" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
-
+                        <div id="dropItemCase-4" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
+                            <img id="dropItem-4" src="img/caja_transparente.png" alt="prueba" height="100" width="100" draggable="false" ondragstart="drag(event)"/>
                         </div>
                         <h4 class="texto-pie-item text-center animated bounceInDown">Servidor</h4>
                     </div>
                     <div id="posicion5">
-                        <div id="dropItem5" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
-
+                        <div id="dropItemCase-5" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
+                            <img id="dropItem-5" src="img/caja_transparente.png" alt="prueba" height="100" width="100" draggable="false" ondragstart="drag(event)"/>
                         </div>
                         <h4 class="texto-pie-item text-center animated bounceInDown">Cliente</h4>
                     </div>
                     <div id="posicion6">
-                        <div id="dropItem6" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
-
+                        <div id="dropItemCase-6" class="dropItem center-block" ondrop="dropCampo(event)" ondragover="allowDrop(event)">
+                            <img id="dropItem-6" src="img/caja_transparente.png" alt="prueba" height="100" width="100" draggable="false" ondragstart="drag(event)"/>
                         </div>
                         <h4 class="texto-pie-item text-center animated bounceInDown">Framework</h4>
                     </div>
