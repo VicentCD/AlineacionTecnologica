@@ -16,9 +16,14 @@ function drag(ev) {
 function dropCampo(ev) {
     ev.preventDefault();
     var idItem = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(idItem));
-    $("#" + ev.target.id).addClass('animated flip');
-    modelToView();
+
+    if (comprobacionDrop(ev.currentTarget.id) === true) {
+        ev.target.appendChild(document.getElementById(idItem));
+        $("#" + ev.target.id).addClass('animated flip');
+        modelToView();
+    } else {
+        alert("Ya está colocado weey!");
+    }
 }
 
 function modelToView() {
@@ -29,11 +34,13 @@ function modelToView() {
     }
 }
 
-
-//function comprobacionDrop(posicion) {
-//    var colocacion = false;
-//    if ($("#" + posicion)[0]) {
-//        colocacion = true;
-//    }
-//    return colocacion;
-//}
+//Cambiar a funcion de clase
+function comprobacionDrop(posicion) {
+    var colocacion = false;
+    if ($('#' + posicion).find("img").length === 0) {
+        colocacion = true;
+    } else {
+        colocacion = false;
+    }
+    return colocacion;
+}

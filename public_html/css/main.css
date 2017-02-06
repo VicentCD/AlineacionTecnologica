@@ -540,6 +540,11 @@ template {
   100% {
     color: red; } }
 
+.container-item {
+  width: 100px;
+  height: 100px;
+  /*border: 2px solid black;*/ }
+
 .selector {
   background-color: lightgreen;
   border-right: 10px dashed green;
