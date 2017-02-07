@@ -3,6 +3,9 @@
     "attributes": {
         "estado": {
             "context": "img"
+        },
+        "tipo": {
+            "context": "div"
         }
     }
 }

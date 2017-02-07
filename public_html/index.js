@@ -7,6 +7,6 @@ function drag(ev) {
 }
 
 function finalAlineacion() {
-    $('#myModal').modal('show');
+    $('#alineacionCompletaModalMessage').modal('show');
     $('#boton-reinicio-pagina').removeClass('hidden');
 }
