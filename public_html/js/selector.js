@@ -10,9 +10,15 @@ function dropSelector(event) {
     destDraggable = destElement.draggable;
     originDraggable = originElement.draggable;
 
+    destEstado = $('#' + destElement.id).attr("estado");
+    originEstado = $('#' + originElement.id).attr("estado");
+
     destElement.src = originSrc;
     originElement.src = destSrc;
 
     destElement.draggable = originDraggable;
     originElement.draggable = destDraggable;
+    
+    $('#' + originElement.id).attr("estado", destEstado);
+    $('#' + destElement.id).attr("estado", originEstado);
 }
