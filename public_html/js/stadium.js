@@ -1,10 +1,10 @@
-var Stadium = new Stadium(6);
+var stadium = new Stadium(6);
 
 function Stadium(posiciones) {
     this.posiciones = posiciones;
 }
 
-function comprobarAlineacionCompleta() {
+Stadium.prototype.comprobarAlineacionCompleta = function() {
     var contador = 0;
     for (i = 0; i < 6; i++) {
         imagen = document.getElementsByClassName("dropItem")[i].firstChild;
@@ -12,11 +12,13 @@ function comprobarAlineacionCompleta() {
         if (estadoImagen === "true") {
             contador++;
         }
-        if (contador === 6) {
+        if (contador === stadium.posiciones) {
             finalAlineacion();
         }
     }
-}
+};
+
+
 
 //Cambiar a funcion de clase
 //function comprobacionDrop(posicion) {
@@ -40,8 +42,10 @@ function comprobarAlineacionCompleta() {
 //};
 
 
+
+
 //--------------------------------------------------------------------------------
-function dropCampo(event) {
+Stadium.prototype.dropCampo = function(event) {
     event.preventDefault();
 
     var destElement = document.getElementById(event.dataTransfer.getData("text"));
@@ -72,5 +76,5 @@ function dropCampo(event) {
     $('#' + originElement.id).attr("estado", destEstado);
     $('#' + destElement.id).attr("estado", originEstado);
 
-    comprobarAlineacionCompleta();
-}
+    stadium.comprobarAlineacionCompleta();
+};
