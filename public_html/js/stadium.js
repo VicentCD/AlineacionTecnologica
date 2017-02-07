@@ -1,14 +1,20 @@
 var Stadium = new Stadium(6);
-var posiciones = 0;
 
 function Stadium(posiciones) {
     this.posiciones = posiciones;
 }
 
-function modelToView() {
-    if (posiciones === 6) {
-        alert("Alineación Completada");
-        $("#reinicio-pagina").removeClass('hidden');
+function comprobarAlineacionCompleta() {
+    var contador = 0;
+    for (i = 0; i < 6; i++) {
+        imagen = document.getElementsByClassName("dropItem")[i].firstChild;
+        estadoImagen = imagen.getAttribute("estado");
+        if (estadoImagen === "true") {
+            contador++;
+        }
+        if (contador === 6) {
+            finalAlineacion();
+        }
     }
 }
 
@@ -23,15 +29,15 @@ function modelToView() {
 //    return colocacion;
 //}
 
-Stadium.prototype.comprobacionDropCampo = function (posicion) {
-    var colocacion = false;
-    if ($('#' + posicion).find("img").length === 0) {
-        colocacion = true;
-    } else {
-        colocacion = false;
-    }
-    return colocacion;
-};
+//Stadium.prototype.comprobacionDropCampo = function (posicion) {
+//    var colocacion = false;
+//    if ($('#' + posicion).find("img").length === 0) {
+//        colocacion = true;
+//    } else {
+//        colocacion = false;
+//    }
+//    return colocacion;
+//};
 
 
 //--------------------------------------------------------------------------------
@@ -49,7 +55,11 @@ function dropCampo(event) {
 
     destClass = ($('#' + destElement.id).attr("class"));
 
+    destEstado = $('#' + destElement.id).attr("estado");
+    originEstado = $('#' + originElement.id).attr("estado");
+
     //Changes
+
     destElement.src = originSrc;
     originElement.src = destSrc;
     $("#" + event.currentTarget.id).addClass('animated flip');
@@ -58,4 +68,9 @@ function dropCampo(event) {
     originElement.draggable = destDraggable;
 
     $('#' + originElement.id).addClass(destClass);
+
+    $('#' + originElement.id).attr("estado", destEstado);
+    $('#' + destElement.id).attr("estado", originEstado);
+
+    comprobarAlineacionCompleta();
 }
