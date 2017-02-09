@@ -88,6 +88,38 @@
                 </div>
                 <div class="stadium col-lg-8">
                     <img class="center-block" src="img/campo-futbol.jpg" alt="Campo Futbol" height="800" width="800"/>
+                    <div id='foco-derecho-container'  onclick="stadium.encenderFocoDerecho()">
+                        <div id='foco-derecho'>
+                            <img src="img/foco-estadio.gif" alt="Foco Derecho"/>
+                        </div>
+                        <div id="encendidoFocoDerecho" class='hidden'>
+                            <div id='foco-luz-derecho-1'>
+                                <img src="img/luz-foco.png" alt="Foco Luz Derecho" height="200" width="200"/>
+                            </div>
+                            <div id='foco-luz-derecho-2'>
+                                <img src="img/luz-foco.png" alt="Foco Luz Derecho" height="200" width="200"/>
+                            </div>
+                            <div id='foco-luz-derecho-3'>
+                                <img src="img/luz-foco.png" alt="Foco Luz Derecho" height="200" width="200"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='foco-izquierdo-container'  onclick="stadium.encenderFocoIzquierdo()">
+                        <div id='foco-izquierdo'>
+                            <img src="img/foco-estadio.gif" alt="Foco Derecho"/>
+                        </div>
+                        <div id="encendidoFocoIzquierdo" class='hidden'>
+                            <div id='foco-luz-izquierdo-1'>
+                                <img src="img/luz-foco.png" alt="Foco Luz Derecho" height="200" width="200"/>
+                            </div>
+                            <div id='foco-luz-izquierdo-2'>
+                                <img src="img/luz-foco.png" alt="Foco Luz Derecho" height="200" width="200"/>
+                            </div>
+                            <div id='foco-luz-izquierdo-3'>
+                                <img src="img/luz-foco.png" alt="Foco Luz Derecho" height="200" width="200"/>
+                            </div>
+                        </div>
+                    </div>
                     <div id="posicion1">
                         <div id="dropItemCase-1" tipo="servidorHttp" class="dropItem center-block" ondrop="stadium.dropCampo(event)" ondragover="allowDrop(event)"><img id="dropItem-1" estado="false" src="img/caja_transparente.png" alt="prueba" height="100" width="100" draggable="false" ondragstart="drag(event)"/></div>
                         <h4 class="texto-pie-item text-center animated bounceInDown">Servidor HTTP</h4>

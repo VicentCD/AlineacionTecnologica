@@ -32,6 +32,26 @@ Stadium.prototype.comprobarTipo = function (event) {
     return comprobacion;
 };
 
+Stadium.prototype.encenderFocoDerecho = function () {
+    if ($('#encendidoFocoDerecho').attr("class") === "hidden") {
+        $('#encendidoFocoDerecho').removeClass("hidden");
+        $('#encendidoFocoDerecho').addClass("animated flash");
+    } else {
+        $('#encendidoFocoDerecho').addClass("hidden");
+        $('#encendidoFocoDerecho').removeClass("animated flash");
+    }
+};
+
+Stadium.prototype.encenderFocoIzquierdo = function () {
+    if ($('#encendidoFocoIzquierdo').attr("class") === "hidden") {
+        $('#encendidoFocoIzquierdo').removeClass("hidden");
+        $('#encendidoFocoIzquierdo').addClass("animated flash");
+    } else {
+        $('#encendidoFocoIzquierdo').addClass("hidden");
+        $('#encendidoFocoIzquierdo').removeClass("animated flash");
+    }
+};
+
 //Cambiar a funcion de clase
 //function comprobacionDrop(posicion) {
 //    var colocacion = false;
@@ -90,6 +110,6 @@ Stadium.prototype.dropCampo = function (event) {
 
         stadium.comprobarAlineacionCompleta();
     } else {
-            $('#errorAlineacion').modal('show');
+        $('#errorAlineacion').modal('show');
     }
 };
